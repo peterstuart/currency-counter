@@ -8,12 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		D066F7D6216E13700056F76A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D066F7D5216E13700056F76A /* AppDelegate.swift */; };
-		D066F7D8216E13700056F76A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D066F7D7216E13700056F76A /* ViewController.swift */; };
+		D066F7D8216E13700056F76A /* CurrencyCounterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D066F7D7216E13700056F76A /* CurrencyCounterViewController.swift */; };
 		D066F7DD216E13740056F76A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D066F7DC216E13740056F76A /* Assets.xcassets */; };
 		D066F7E0216E13740056F76A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D066F7DE216E13740056F76A /* LaunchScreen.storyboard */; };
 		D066F7E8216E13C40056F76A /* CurrencyCounter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D066F7E7216E13C40056F76A /* CurrencyCounter.swift */; };
 		D066F7EA216E146F0056F76A /* DigitTicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D066F7E9216E146F0056F76A /* DigitTicker.swift */; };
 		D066F7FA216E1CDD0056F76A /* CurrencyCounterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D066F7F9216E1CDD0056F76A /* CurrencyCounterTests.swift */; };
+		D0C0361A217E90F400F6E731 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C03619217E90F400F6E731 /* AppCoordinator.swift */; };
+		D0C0361C217E925400F6E731 /* CurrencyCounterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C0361B217E925400F6E731 /* CurrencyCounterViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,7 +31,7 @@
 /* Begin PBXFileReference section */
 		D066F7D2216E13700056F76A /* CurrencyCounter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CurrencyCounter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D066F7D5216E13700056F76A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D066F7D7216E13700056F76A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D066F7D7216E13700056F76A /* CurrencyCounterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyCounterViewController.swift; sourceTree = "<group>"; };
 		D066F7DC216E13740056F76A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D066F7DF216E13740056F76A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D066F7E1216E13740056F76A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -38,6 +40,8 @@
 		D066F7EF216E1CD00056F76A /* CurrencyCounterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CurrencyCounterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D066F7F3216E1CD00056F76A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D066F7F9216E1CDD0056F76A /* CurrencyCounterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyCounterTests.swift; sourceTree = "<group>"; };
+		D0C03619217E90F400F6E731 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		D0C0361B217E925400F6E731 /* CurrencyCounterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyCounterViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,11 +84,13 @@
 			isa = PBXGroup;
 			children = (
 				D066F7E1216E13740056F76A /* Info.plist */,
+				D0C03619217E90F400F6E731 /* AppCoordinator.swift */,
 				D066F7D5216E13700056F76A /* AppDelegate.swift */,
 				D066F7E7216E13C40056F76A /* CurrencyCounter.swift */,
 				D066F7F9216E1CDD0056F76A /* CurrencyCounterTests.swift */,
+				D066F7D7216E13700056F76A /* CurrencyCounterViewController.swift */,
+				D0C0361B217E925400F6E731 /* CurrencyCounterViewModel.swift */,
 				D066F7E9216E146F0056F76A /* DigitTicker.swift */,
-				D066F7D7216E13700056F76A /* ViewController.swift */,
 				D08CDAB6216F752200BC7031 /* Resources */,
 			);
 			path = CurrencyCounter;
@@ -207,9 +213,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D066F7D8216E13700056F76A /* ViewController.swift in Sources */,
+				D066F7D8216E13700056F76A /* CurrencyCounterViewController.swift in Sources */,
 				D066F7E8216E13C40056F76A /* CurrencyCounter.swift in Sources */,
+				D0C0361A217E90F400F6E731 /* AppCoordinator.swift in Sources */,
 				D066F7D6216E13700056F76A /* AppDelegate.swift in Sources */,
+				D0C0361C217E925400F6E731 /* CurrencyCounterViewModel.swift in Sources */,
 				D066F7EA216E146F0056F76A /* DigitTicker.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

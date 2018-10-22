@@ -10,8 +10,8 @@ import UIKit
 
 class DigitTicker: UIView {
     enum AnimationDirection {
-        case up
-        case down
+        case increasing
+        case decreasing
     }
 
     private static let animationDuration: TimeInterval = 0.5
@@ -85,10 +85,10 @@ class DigitTicker: UIView {
         let orderedStrings: [String]
 
         switch animationDirection {
-        case .some(.up):
+        case .some(.increasing):
             orderedStrings = Array(reversed[(reversed.count - index - 1) ..< reversed.count] + reversed[0 ..< (reversed.count - index - 1)])
         default:
-            // Down or no animation
+            // Decreasing or no animation
             orderedStrings = Array(reversed[(reversed.count - index) ..< reversed.count] + reversed[0 ..< (reversed.count - index)])
         }
 

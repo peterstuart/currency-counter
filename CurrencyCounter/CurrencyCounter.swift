@@ -83,7 +83,7 @@ class CurrencyCounter: UIView {
     }
 
     public func set(cents: Int, animated: Bool) {
-        let animationDirection: DigitTicker.AnimationDirection = cents > self.cents ? .up : .down
+        let animationDirection: DigitTicker.AnimationDirection = cents > self.cents ? .increasing : .decreasing
 
         self.cents = cents
 
@@ -120,7 +120,7 @@ class CurrencyCounter: UIView {
     func viewTypes(from cents: Int) -> [ViewType] {
         let decimal = Decimal(cents) / 100
         let decimalNumber = NSDecimalNumber(decimal: decimal)
-        let formattedString = currencyFormatter.string(from: decimalNumber)!.replacingOccurrences(of: "\\s+", with: "", options: .regularExpression) // Remove whitespace from the formatter string
+        let formattedString = currencyFormatter.string(from: decimalNumber)!.replacingOccurrences(of: "\\s+", with: "", options: .regularExpression) // Remove whitespace from the formatted string
 
         return viewTypes(from: formattedString)
     }
@@ -138,7 +138,7 @@ class CurrencyCounter: UIView {
             return [.decimalSeparator]
                 + viewTypes(from: String(string.dropFirst(decimalSeparator.count)))
         } else if string.hasPrefix(negativeSymbol) {
-            return [.negativeSymbol] + viewTypes(from: String(string.dropFirst()))
+            return [.negativeSymbol] + viewTypes(from: String(string.dropFirst(negativeSymbol.count)))
         } else {
             let char = string.first!
             return [.digit(String(char))] + viewTypes(from: String(string.dropFirst()))
